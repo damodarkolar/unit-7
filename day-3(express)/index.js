@@ -1,11 +1,10 @@
-
-const e = require("express");
 const express=require("express");
+const cors=require("cors")
 let PORT=8080;
 const app=express()
 let data=[];
 app.use(express.json())
-
+app.use(cors())
 app.get("/todos", (req, res)=>{
     res.end(JSON.stringify(data))
     console.log(req.params)
