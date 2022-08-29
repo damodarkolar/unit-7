@@ -11,6 +11,7 @@ async function mongoosedb(){
 
 app.get("/todo",(req, res)=>{
 mongoosedb()
+mongoose.
 res.send()
 conn.disconnect()
 })
