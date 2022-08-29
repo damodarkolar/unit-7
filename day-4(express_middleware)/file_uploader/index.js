@@ -1,10 +1,13 @@
 const express =require("express");
+const multer =require("multer")
+const upload=multer({dest:"./upload"});
 const PORT=8070;
 const app=express();
 
-app.get("/", (req, res)=>{
-
-    res.send("<input type=file/>")
+app.post("/", upload.single("image"),(req, res)=>{
+req.file()
+    // req.file()
+    req.end("uploaded")
 })
 
 
